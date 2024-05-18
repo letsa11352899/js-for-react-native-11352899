@@ -4,7 +4,9 @@ function processArray(arr) {
     function formatArrayStrings(strings, processedNumbers) {
         return strings.map((string, index) => {
           const processedNumber = processedNumbers[index];
-          return `${string} ${processedNumber}`;
+          return processedNumber % 2 === 0
+            ? string.toUpperCase()
+            : string.toLowerCase();
         });
       }
-    }
+}
